@@ -76,7 +76,7 @@
 				</div> </a>
 				<br />
 
-				<a href="#camera" data-transition="pop">
+				<a href="#camera" id= "capturePhoto">
 				<div style="background: rgb(1, 229, 255);color:white; text-align:center; font-weight:bolder; padding: 40px;box-shadow: 5px 5px 5px grey;">
 					Camera
 				</div> </a>
@@ -136,20 +136,32 @@
 				
 			</div><!-- /content -->
 		</div><!-- /page -->
+<script>
+(function(){
+	"use strict";
 
+	document.addEventListener('device ready', onDeviceReady.bind(this), false);
+	var pictureSource;
+	var destinationType;
+	function onDeviceReady(){
+		pictureSource = navigator.camera.PictureSourceType;
+		destinationType = navigator.camera.destinationType;
 
-		<div data-role="page" id="camera">
+		document.getElementById("capturePhoto").onclick = function(){
+			navigator.camera.getPicture(onPhotoDataSuccess, onFail,{
+				quality : 50,
+				destinationType:destinationType.DATA_URL
+			});
+		}
+	};
+};
+	function onPhotoDataSuccess(imageData){
+		var smallImage=document.getElementById('smallImage');
+		smallImage.style.display='block';
+		smallImage.src="data:image/jpeg;base64,"+ imageData;	}
+)
 
-			<div data-role="header" style="text-shadow: none">
-				<h1>EC</h1>
-				<a href="index.html" data-role="button" data-icon="refresh" data-iconpos="notext" style="background: white;border: none;">Refresh</a>
-			</div><!-- /header -->
-
-			<div data-role="content" style="text-shadow: none">
-				<h1>camera</h1>
-				
-			</div><!-- /content -->
-		</div><!-- /page -->
+</script>
 	</body>
 	<script>
 		$.mobile.document
