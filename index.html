@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>COLLATE</title>
+		<title>Ashesi Campus Tour</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
 
@@ -57,25 +57,26 @@
 		<div data-role="page" id="landingPage" style="background: white">
 
 			<div data-role="header" style="text-shadow: none">
-				<h1>EC</h1>
+				<h1>Ashesi Campus Tour</h1>
 				<a href="index.html" data-role="button" data-icon="refresh" data-iconpos="notext" style="background: white;border: none;">Refresh</a>
 			</div><!-- /header -->
 
 			<div data-role="content" style="text-shadow: none">
-				<img src="img/images.jpg" align="bottom">
+				<img src="img/landing.jpg" align="bottom">
 
-				<a href="#declareRegions" data-transition="flip">
+				<a href="#businessDept" data-transition="flip">
 				<div style="background: rgb(1, 229, 255);color:white; text-align:center; font-weight:bolder; padding: 40px;box-shadow: 5px 5px 5px grey;">
-					Declare
+					Business Administration Department
 				</div> </a>
 				<br />
 			
-				<a href="#displayResults" data-transition="slide">
+				<a href="#compScience" data-transition="turn">
 				<div style="background: rgb(1, 229, 255);color:white; text-align:center; font-weight:bolder; padding: 40px;box-shadow: 5px 5px 5px grey;">
-					Results
+					Computer Science Department
 				</div> </a>
 				<br />
 
+<<<<<<< HEAD
 				<button id= "capturePhoto"> CAMERA </button>
 
 <!-- 				Display none means when the application loads the image tag would show -->
@@ -86,64 +87,81 @@
 					<audio controls>
 						<source src="audio.mp3" type="audio/mpeg">
 					</audio>
+=======
+				<a href="#engrDept" data-transition="flow">
+				<div style="background: rgb(1, 229, 255);color:white; text-align:center; font-weight:bolder; padding: 40px;box-shadow: 5px 5px 5px grey;">
+					Engineering Department
+				</div> </a>
+				<br />				
 
 			</div><!-- /content -->
 		</div><!-- /page -->
 
-		<div data-role="page" id="declareRegions">
+		<div data-role="page" id="businessDept">
 
 			<div data-role="header" style="text-shadow: none">
-				<h1>EC</h1>
-				<a href="index.html" data-role="button" data-icon="refresh" data-iconpos="notext" style="background: white;border: none;">Refresh</a>
+				<h1>Business Admin</h1>
+				<a href="#landingPage" data-role="button" data-icon="refresh" data-iconpos="notext" style="background: white;border: none;">Refresh</a>
 			</div><!-- /header -->
 
 			<div data-role="content" style="text-shadow: none">
-				<div class="ui-field-contain">
-					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-				<select id="filter-menu" data-native-menu="false">
-					<option value="SFO"> Greater Accra</option>
-					<option value="LAX"> North West</option>
-					<option value="YVR"> Volta</option>
-					<option value="MAC"> Upper North</option>
-					<option value="ABC"> South West</option>
-					<option value="PDP"> Eastern</option>
-					<option value="GHJ"> Western</option>
-					<option value="UYI"> Upper East</option>
-					<option value="JKG"> Southern</option>
-				</select>
+				<img src="img/business.jpg" align="bottom" width="450">
 
-				<select id="filter-menu" data-native-menu="false">
-					<option value="SFO"> Constituency A</option>
-					<option value="LAX"> Constituency B</option>
-					<option value="YVR"> Constituency C</option>
-					<option value="MAC"> Constituency D</option>
-					<option value="ABC"> Constituency E</option>
-					<option value="PDP"> Constituency F</option>
-					<option value="GHJ"> Constituency G</option>
-					<option value="UYI"> Constituency H</option>
-					<option value="JKG"> Constituency I</option>
-				</select>
-				</fieldset>
+				<div style="background: rgb(1, 229, 255);color:white; text-align:center; font-weight:bolder; padding: 40px;box-shadow: 5px 5px 5px grey;">
+					The Business Administration department is found at the Radichel Hall. This hall houses four classrooms. It can be found on the way to the cafetaria from the Founder's court.
 				</div>
+				<br />
+>>>>>>> origin/master
+
+				<img src="img/bus.jpg" align="top" width="450">
 			</div><!-- /content -->
 		</div><!-- /page -->
 
-	<div data-role="page" id="displayResults">
+	<div data-role="page" id="compScience">
 
 			<div data-role="header" style="text-shadow: none">
-				<h1>EC</h1>
-				<a href="index.html" data-role="button" data-icon="refresh" data-iconpos="notext" style="background: white;border: none;">Refresh</a>
+				<h1>Computer Science</h1>
+				<a href="#landingPage" data-role="button" data-icon="refresh" data-iconpos="notext" style="background: white;border: none;">Refresh</a>
 			</div><!-- /header -->
 
 			<div data-role="content" style="text-shadow: none">
-				<h1>UYI = 40</h1>
-				<h2>JKG = 67</h2>
+				<img src="img/computer.jpg" align="bottom" width="450">
+
+				<div style="background: rgb(1, 229, 255);color:white; text-align:center; font-weight:bolder; padding: 40px;box-shadow: 5px 5px 5px grey;">
+					The Computer department is found at the Nana Araba Apt Hall. This hall houses two classrooms and a hangout space. It can be found on the way to the Engineering block from the cafetaria.
+				</div>
+				<br />
+
+				<img src="img/comp.jpg" align="top" width="450">
 				
 			</div><!-- /content -->
 		</div><!-- /page -->
 
+	<div data-role="page" id="engrDept">
+
+			<div data-role="header" style="text-shadow: none">
+				<h1>Engineering</h1>
+				<a href="#landingPage" data-role="button" data-icon="refresh" data-iconpos="notext" style="background: white;border: none;">Refresh</a>
+			</div><!-- /header -->
+
+			<div data-role="content" style="text-shadow: none">
+				<img src="img/engineering.jpg" align="bottom" width="450">
+
+				<div style="background: rgb(1, 229, 255);color:white; text-align:center; font-weight:bolder; padding: 40px;box-shadow: 5px 5px 5px grey;">
+					The Engineering department is found at the Engineering Block. This block houses four classrooms, three labs and one lounge. It can be found on at the back of school behind the fountain.
+				</div>
+				<br />
+
+				<img src="img/eng.jpg" align="top" width="450">
+				
+			</div><!-- /content -->
+		</div><!-- /page -->
+
+<<<<<<< HEAD
 			<script type="text/javascript" src="js/index.js"></script>		
 
+=======
+>>>>>>> origin/master
 	</body>
 	<script>
 		$.mobile.document
