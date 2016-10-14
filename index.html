@@ -76,11 +76,16 @@
 				</div> </a>
 				<br />
 
-				<a href="#camera" id= "capturePhoto">
-				<div style="background: rgb(1, 229, 255);color:white; text-align:center; font-weight:bolder; padding: 40px;box-shadow: 5px 5px 5px grey;">
-					Camera
-				</div> </a>
-				<br />
+				<button id= "capturePhoto"> CAMERA </button>
+
+<!-- 				Display none means when the application loads the image tag would show -->
+					<div><center><img class="lazy" style="display:none;width:100%;height:100%;" id="smallImage" src=""/></center></div>
+					<video width="400" controls>
+						<source src="video.mp4" type="video/mp4">
+					</video>
+					<audio controls>
+						<source src="audio.mp3" type="audio/mpeg">
+					</audio>
 
 			</div><!-- /content -->
 		</div><!-- /page -->
@@ -136,32 +141,9 @@
 				
 			</div><!-- /content -->
 		</div><!-- /page -->
-<script>
-(function(){
-	"use strict";
 
-	document.addEventListener('device ready', onDeviceReady.bind(this), false);
-	var pictureSource;
-	var destinationType;
-	function onDeviceReady(){
-		pictureSource = navigator.camera.PictureSourceType;
-		destinationType = navigator.camera.destinationType;
+			<script type="text/javascript" src="js/index.js"></script>		
 
-		document.getElementById("capturePhoto").onclick = function(){
-			navigator.camera.getPicture(onPhotoDataSuccess, onFail,{
-				quality : 50,
-				destinationType:destinationType.DATA_URL
-			});
-		}
-	};
-};
-	function onPhotoDataSuccess(imageData){
-		var smallImage=document.getElementById('smallImage');
-		smallImage.style.display='block';
-		smallImage.src="data:image/jpeg;base64,"+ imageData;	}
-)
-
-</script>
 	</body>
 	<script>
 		$.mobile.document
